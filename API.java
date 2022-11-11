@@ -1,29 +1,3 @@
-# Play with Docker and Java
-
-![Banner](./banner.svg)
-
-## How to
-
-1. Create a new folder on your machine
-2. Create a file called `Main.java` with this content
-
-```java
-public class Main
-{
-     public static void main(String[] args) {
-        System.out.println("Hello, World");
-    }
-}
-```
-
-3. On the command line, run `docker run --rm -v $PWD:/app -w /app openjdk:11 javac Main.java` to download (the first time the `openjdk` Docker image). The command will then run the `javac` command and will compile your `Main.java` source into `Main.class`
-4. Run `docker run --rm -v $PWD:/app -w /app openjdk:11 java Main` to run it.
-
-## Call REST API
-
-1. Create a new file called `API.java` with this content
-
-```java
 package restclient;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -54,12 +28,3 @@ public class API {
         }
     }
 }
-
-```
-
-2. On the command line, run `docker run --rm -v $PWD:/app -w /app openjdk:11 javac API.java` to compile your `API.java` source into `API.class`
-3. Run `docker run --rm -v $PWD:/app -w /app openjdk:11 java API.java` to run it.
-
-This example will use the sample `https://jsonplaceholder.typicode.com/todos/1` to generate one fake TODO. The JSON will be displayed on the command line.
-
-![TODO](./images/todo-json.png)
