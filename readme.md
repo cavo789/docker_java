@@ -1,6 +1,6 @@
 # Play with Docker and Java
 
-**Personal learning**
+![Banner](./banner.svg)
 
 ## How to
 
